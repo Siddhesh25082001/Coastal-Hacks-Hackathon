@@ -1,0 +1,16 @@
+<!-- This is 'messages.ejs' file of Coastal Hacks Hackathon -->
+
+<% if(success.length > 0 ) { %>
+        <div class="alert alert-success alert-dismissible fade show " role="alert" style="width: 90%; margin: 10px auto;">
+            <p style="text-align: center; font-weight: bold; font-size: 20px; margin: 0"><%= success %></p> 
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+<% } %>
+
+
+<% if(error.length > 0 ){ %>
+        <div class="alert alert-danger alert-dismissible fade show" role="alert" style="width: 90%; margin: 10px auto;">
+            <p style="text-align: center; font-weight: bold; font-size: 20px; margin: 0"><%= error %></p> 
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+<% } %>

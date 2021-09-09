@@ -1,0 +1,352 @@
+<!-- This is 'index.html' for Coastal Hacks Hackathon -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+    <!-- This is the Head Section -->
+    <head>
+
+        <!-- Meta Information for Search Engine -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Title of Website -->
+        <title>Coastal Hacks</title>
+
+        <!-- Link to the favicon -->
+        <link rel="shortcut icon" href="/images/logo.jpg" type="image/x-icon">
+
+        <!-- Link to the 'styles.css' file -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="/css/styles.css">
+
+        <!-- Bootstrap scripts -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+        <!-- Fontawesome icons Script -->
+        <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" data-auto-replace-svg="nest"></script>
+
+    </head>
+
+    <!-- This is the Body Section -->
+    <body>
+
+         <!-- BedTime Modal -->
+        <form action="/user/addBedtime" method="POST">
+        <div class="popup">
+            <div class="box">      
+                <div class="part-1">
+                    <div class="left">
+                        <i class="fas fa-moon"></i>
+                    </div>
+                    <div class="right">
+                        <h4>What time do you typically go to bed?</h4>
+                        <p>A rough estimate is fine</p>
+                    </div>
+                </div>
+                <div class="part-2">
+                    <input type="time" name="time" id="">
+                </div>
+                <div class="buttons">
+                    <button type="submit" class="btn btn-success">Add Bedtime</button>
+                    <button type="button" class="btn btn-danger close">Cancel</button>
+                </div>
+            </div>
+        </div>
+        </form>
+
+        <!-- Habit Modal -->
+        <div class="habit">
+            <div class="box">      
+                <div class="part-1">
+                    <div class="left">
+                        <h4>Add a new Habit</h4>
+                        <p>Tacke your goals in daily doses</p>
+                    </div>
+                    <div class="right">
+                        <i class="fas fa-times habit-close"></i>
+                    </div>
+                </div>
+                <div class="sec">
+                    <div class="form">
+                        <form action="/user/addHabit" method="POST">
+                            <div class="form-row">
+                                <div class="col">
+                                    <div class="form-group">
+                                        <label for="hname">1. Name this Habit <span>*</span> </label>
+                                        <input type="text" class="form-control" id="fname" name="hname" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col">
+                                    <div class="form-group">
+                                        <label>2. Habit Type <span>*</span> </label>
+                                        <select class="form-select" name="htype" aria-label="Default select example" required>
+                                            <option selected>Habit Type</option>
+                                            <option value="1">To-do</option>
+                                            <option value="0">Not-To-do</option> 
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col">
+                                    <div class="form-group">
+                                        <label for="hcommitment">3. Habit Committment <span>*</span> </label>
+                                        <select class="form-select" name="hcommitment" aria-label="Default select example" required>
+                                            <option value="7">7 Days</option>
+                                            <option value="21" selected>21 Days</option> 
+                                            <option value="21">60 Days</option> 
+                                            <option value="90">90 Days</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <label for="hfrequency">4. Weeky Frequency <span>*</span> </label>
+                                <div class="col special">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="mon" value="mon" id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            Mon
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="tue" value="tue" id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                          Tue
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox"  name="wed" value="Wed" id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                          Wed
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox"  name="thu" value="Thu" id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                          Thu
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox"  name="fri" value="Fri" id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                          Fri
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox"  name="sat" value="Sat" id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                          Sat
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox"  name="sun" value="Sun" id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                          Sun
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div class="form-row spc">
+                                <button type="button" name="weekday" class="btn btn-primary">WeekDays</button>
+                                <button type="button" name="all" class="btn btn-primary">All</button>
+                            </div> -->
+                       
+                    </div>
+                </div>
+                <div class="buttons">
+                    <button type="submit" class="btn btn-success">Submit</button>
+                </div>
+            </form>
+            </div>
+        </div>
+
+        <!-- This is the Header Section -->
+        <section class="top">
+            <header>
+                <div class="part-1">
+                    <i class="fas fa-volleyball-ball"></i>
+                    <a href="#"><h3>Coastal Hacks</h3></a>
+                </div>
+                <div class="part-2">
+                    <div class="one"></div>
+                    <div class="two"></div>
+                    <div class="three"></div>
+                </div>
+                <div class="part-3">
+                    <div class="dropdown">
+                        <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-user-circle"></i>
+                        </a>
+                      
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                          <div class="details dropdown-item">
+                              <li class="user"><%= user.name %></li>
+                              <li class="user-email"><%= user.email %></li>
+                          </div>
+                          <a class="dropdown-item" href="/user/logout"><button class="btn btn-danger">Logout</button></a>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        </section>
+
+        <%- include('messages.ejs') -%>
+
+        <section class="banner">
+            <div class="part-1">
+                <div class="first">
+                    <h3>Welcome <%= user.name  %> !!!</h3>
+                    <% if(user.bed_time == 0) { %>
+                    <button class="open">Add Your Bedtime</button>
+                    <% } else { %>
+                    <button class="open">Your Bedtime <%= user.bed_time %></button>
+                   
+                    <% } %>
+                </div>
+                <div class="third">
+                    <div class="left-side">
+                        <button class="left-arrow"><i class="fas fa-arrow-left"></i></button>
+                        <button class="right-arrow"><i class="fas fa-arrow-right"></i></button>
+                        <h6 class="today"></h6>
+                    </div>
+                    <div class="right-side">
+                        <div class="new-habit">
+                            <button class="add-habit habit-open"><i class="fas fa-plus"></i> Add Habit</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="fourth">
+                    <div class="progress">
+                        <% if (allHabits) { %>
+                         <!-- Count how many habits are completed -->
+                         <% var totalHabitsCompleted = 0 %>
+                         <% allHabits.forEach(function(habit,index) { %>
+                           <% if(habit.completed_count >= habit.habit_commitment) { %>
+                            <% totalHabitsCompleted += 1; %>
+                            <% } %>
+                         <% }); %>
+                         <% var blueBarValue = Math.ceil((totalHabitsCompleted/allHabits.length)*100); %>
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="<%= blueBarValue %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= blueBarValue %>%"></div>
+                         <% } else { %>
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+                        <% } %>
+                      </div>
+                    <div class="info">
+                        <div class="left-info">
+                            <h5><i class="fas fa-arrow-up"></i> Up 100% from the week before</h5>
+                        </div>
+                        <div class="right-info">
+
+                            <h5><%=blueBarValue%> % achieved</h5>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="habits">
+                    <% if(allHabits) { %>
+                       
+                        <% allHabits.forEach(function(habit, index) { %>
+                            <div class="info">
+                                <div class="pahla">
+                                    <h4><%= habit.habit_name %></h4>
+                                </div>
+                                <div class="dusra">
+                                    <% var count = habit.completed_count; %>
+                                    <!-- if count is greater than commitment, set it to commitment  -->
+                                    <%  if(count >= habit.habit_commitment) { %>
+                                        <% count = habit.habit_commitment %>
+                                        <% } %>
+                                    <% var barValue = Math.ceil((count / habit.habit_commitment)*100) %>
+                                    <p><%= count %> day streak &#128293;</p>
+                                    <div class="progress con" style="height: 25px;">
+                                        <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar" aria-valuenow="<%= barValue %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= barValue %>%;" ></div>
+                                    </div>
+                                </div>
+                                <div class="teesra">
+                                    <% const today = new Date(); %>
+                                    <% const lastUpdatedDate = habit.last_date; %>
+                                        <% if(lastUpdatedDate.getDate() == today.getDate() && lastUpdatedDate.getMonth() == today.getMonth() && lastUpdatedDate.getFullYear() == today.getFullYear()) { %>
+                                           <button type="button" class="btn btn-success" disabled>Completed</button> 
+                                        <% } else { %>
+                                        <form action="/user/habitCompleted?habit_id=<%= habit._id %>" method="POST" >
+                                            <button type="submit" class="btn btn-success confe">Mark Completed</button>
+                                        </form>
+                                        <% } %>
+                                </div>
+                            </div> 
+                        <% });%>
+
+                    <% } %>
+                </div>
+
+
+                <!-- <div class="second">
+                    <div class="left">
+                        <div class="header">
+                            <input type="radio" name="slider" id="week">
+                            <input type="radio" name="slider" id="month">
+                            <input type="radio" name="slider" id="year">
+                            <input type="radio" name="slider" id="all-time">
+                            <nav>
+                                <label for="week" class="week">Week</label>
+                                <label for="month" class="month">Month</label>
+                                <label for="year" class="year">Year</label>
+                                <label for="all-time" class="all-time">All Time</label>
+                                <div class="slider"></div>
+                            </nav>
+
+                            <section class="grid">
+                                <div class="content content-1">
+                                    <div class="gridlayout">
+                                        <p>
+                                            Content--2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil quisquam dolorem excepturi tenetur voluptatum exercitationem at vel corrupti aliquam voluptatibus doloribus cumque quod rerum accusantium facere accusamus magni doloremque, sunt explicabo fuga velit modi dolore. Aperiam quod similique, nisi earum aliquid impedit totam adipisci sunt vero fuga architecto, aliquam quia.odi? A, sunt!
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="content content-2">
+                                    <p>
+                                        Content--2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil quisquam dolorem excepturi tenetur voluptatum exercitationem at vel corrupti aliquam voluptatibus doloribus cumque quod rerum accusantium facere accusamus magni doloremque, sunt explicabo fuga velit modi dolore. Aperiam quod similique, nisi earum aliquid impedit totam adipisci sunt vero fuga architecto, aliquam quia.odi? A, sunt!
+                                    </p>
+                                </div>
+                                <div class="content content-3">
+                                    <p>
+                                        Content--3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil quisquam dolorem excepturi tenetur voluptatum exercitationem at vel corrupti aliquam voluptatibus doloribus cumque quod rerum accusantium facere accusamus magni doloremque, sunt explicabo fuga velit modi dolore. Aperiam quod similique, nisi earum aliquid impedit totam adipisci sunt vero fuga architecto, aliquam quia.odi? A, sunt!
+                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque unde eos repellendus, iure error eligendi eum recusandae earum alias eius delectus molestiae ab praesentium consequuntur cupiditate dolore sint consequatur illum cumque modi? Adipisci eaque a consequatur odit delectus atque, quia quod veniam modi doloremque eligendi sapiente deleniti repellendus commodi dignissimos!
+                                    </p>
+                                </div>
+                                <div class="content content-4">
+                                    <p>
+                                        Content--4 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil quisquam dolorem excepturi tenetur voluptatum exercitationem at vel corrupti aliquam voluptatibus doloribus cumque quod rerum accusantium facere accusamus magni doloremque, sunt explicabo fuga velit modi dolore. Aperiam quod similique, nisi earum aliquid impedit totam adipisci sunt vero fuga architecto, aliquam quia.odi? A, sunt!
+                                    </p>
+                                </div>
+                            </section>
+
+                        </div>
+                    </div>
+                </div> -->
+                
+            </div>
+            <div class="part-2">
+                <div class="plants">
+                    <h4>Yaha Par Plant ayega</h4>
+                </div>
+            </div>
+        </section>
+
+    <canvas id="my-canvas"></canvas>
+    </body>
+    <script src="/js/index.min.js"></script>
+    <script src="/js/script.js"></script>
+    
+    <!-- Script to the Bootstap CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</html>

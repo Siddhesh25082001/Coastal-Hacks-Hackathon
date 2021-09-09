@@ -1,0 +1,635 @@
+/* This is 'styles.css' for Coastal Hacks Hackathon */
+
+/* Importing Poppins Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    max-height: 100vh;
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar {
+    width: 8px;
+    cursor: pointer;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: orange;
+    border-radius: 2px;
+}
+
+/* Utility Classes */
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+a:hover{
+    text-decoration: none;
+    color: #fff;
+}
+
+li{
+    list-style: none;
+}
+
+section{
+    width: 100%;
+}
+
+/* BedTime Modal */
+
+.popup{
+    background: rgba(0, 0, 0, 0.65);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    opacity: 0;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 2;
+    transition: all 0.3s ease-in-out;
+}
+
+.popup.show{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.popup .box{
+    align-self: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(104, 80, 80, 0.2);
+    padding: 20px 40px;
+    width: 35%;
+    margin: 10px auto;
+}
+
+.popup .box .part-1, .part-2, .part-3{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.popup .box .part-1 .left{
+    width: 25%;
+    background-color: #3b43d8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 86px;
+    color: #fff;
+    font-size: 24px;
+    border-radius: 15px;
+}
+
+.popup .box .part-1 .right{
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+}
+
+.popup .box .part-1 .right h4{
+    font-weight: 500;
+    font-size: 28px;
+}
+
+.popup .box .part-1 .right p{
+    font-size: 18px;
+    font-weight: 600;
+    opacity: 0.5;
+}
+
+.popup .box .part-2, .part-3{
+    width: 100%;
+}
+
+.popup .box .part-2 input{
+    width: 100%;
+    padding: 5px 10px;
+    border-radius: 20px;
+    border: 2px solid #007bff;
+    cursor: pointer;
+    outline: none;
+}
+
+.popup .box .buttons{
+    display: flex;
+    padding: 15px 0px;
+    justify-content: space-around;
+}
+
+.popup .box .part-3 button{
+    width: 60%;
+}
+
+/* Habit Modal */
+
+.habit{
+    background: rgba(0, 0, 0, 0.65);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    opacity: 0;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 2;
+    transition: all 0.3s ease-in-out;
+}
+
+.habit.show{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.habit .box{
+    align-self: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(104, 80, 80, 0.2);
+    padding: 20px 40px;
+    width: 45%;
+    margin: 10px auto;
+}
+
+.habit .box .part-1, .part-2{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.habit .box .part-1 .left{
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #111;
+    font-size: 24px;
+    border-radius: 15px;
+}
+
+.habit .box .part-1 .left h4{
+    font-weight: 500;
+    font-size: 28px;
+}
+
+.habit .box .part-1 .left p{
+    font-size: 18px;
+    font-weight: 600;
+    opacity: 0.5;
+}
+
+.habit .box .part-1 .right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15%;
+    font-size: 40px;
+    cursor: pointer;
+    color: red;
+}
+
+.habit .box .sec, .form, form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.habit .box .sec, .form form .form-row{
+    margin: 10px 0px;
+    width: 100%;
+}
+
+.habit .box .sec, .form form .spc{
+    display: flex;
+    justify-content: space-around;
+}
+
+.habits .box .sec, .form form button{
+    width: 250px;
+}
+
+.habit .box .sec, .form form .form-row .col label{
+    font-size: 18px;
+}
+
+.habit .box .sec, .form form .form-row .special{
+    display: flex !important;
+    justify-content: space-between !important;
+}
+
+.habit .box .buttons{
+    display: flex;
+    padding: 15px 0px;
+    justify-content: space-around;
+}
+
+span{
+    font-weight: bold;
+    color: red;
+}
+
+/* Header Section */
+
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 16px 24px;
+    background-color: #007bff;
+    color: #fff;
+}
+
+header .part-1, .part-2, .part-3{
+    width: 30%;
+}
+
+header .part-1 .fa-volleyball-ball{
+    font-size: 32px;
+}
+
+header .part-1 h3{
+    font-weight: bold;
+    margin-left: 10px;
+    font-size: 28px;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+}
+
+header .part-1, .part-2, .part-3{
+    display: flex;
+    align-items: center;
+}
+
+header .part-1{
+    justify-content: flex-start;
+}
+
+header .part-2{
+    justify-content: center;
+    cursor: pointer;
+}
+
+header .part-2 .one, .two, .three{
+    margin: 0px 5px;
+    width: 25px;
+    height: 25px;
+    background-color: #8cbdf2;
+    border-radius: 4px;
+}
+
+header .part-3{
+    justify-content: flex-end;
+}
+
+header .part-3 .fa-user-circle{
+    font-size: 32px;
+    cursor: pointer;
+    color: #fff;
+}
+
+/* Banner Section */
+header .part-3 .dropdown{
+    width: 300px;
+}
+
+header .part-3 .dropdown .details{
+    padding: 5px 8px;
+}
+
+header .part-3 .dropdown .details .user{
+    font-weight: bold;
+}
+
+header .part-3 .dropdown .details .user-email{
+    font-weight: bold;
+    color: grey;
+    opacity: 0.8;
+}
+
+.banner{
+    width: 93%;
+    margin: 15px auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.banner .part-1{
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-height: 500px;
+    padding: 0px 15px;
+    overflow: scroll;
+}
+
+.banner .part-1 .first{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 15px 0px;
+}
+
+.banner .part-1 .first h3{
+    font-size: 32px;
+    font-weight: bold;
+    justify-content: flex-start;
+}
+
+.banner .part-1 .first .open{
+    background: none;
+    border: none;
+    outline: none;
+    color: #111;
+    font-size: 24px;
+    font-weight: bold;
+    opacity: 0.4;
+}
+
+.banner .part-1 .third{
+    display: flex;
+    width: 100%;
+    margin: 20px 0px;
+}
+
+.banner .part-1 .third .left-side{
+    width: 80%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.banner .part-1 .third .left-side .left-arrow, .right-arrow{
+    width: 40px;
+    height: 40px;
+    border-radius: 200px;
+    border: 2px solid rgba(225, 225, 225, 1);
+    background: none;
+    outline: none;
+    color: rgba(225, 225, 225, 1);
+    margin: 0px 5px;
+}
+
+.banner .part-1 .third .right-side{
+    width: 20%;
+    padding: 2px 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner .part-1 .third .right-side .add-habit{
+    padding: 20px 16px;
+    background: none;
+    border: 3px solid rgba(225, 225, 225, 0.85);
+    color: #007bff;
+    outline: none;
+    font-weight: bold;
+    border-radius: 25px;
+}
+
+.banner .part-1 .third .right-side .add-habit:hover{
+    border: 3px solid #007bff;
+}
+
+.banner .part-1 .fourth{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+.banner .part-1 .fourth .container{
+    width: 100%;
+    margin: 20px 0px;
+    padding: 0px;
+    border-radius: 25px;
+}
+
+.banner .part-1 .fourth .container .progress-bar{
+    height: 10px;
+}
+
+.banner .part-1 .fourth .info{
+    display: flex;
+    justify-content: space-between;
+}
+
+.banner .part-1 .fourth .info .fa-arrow-up{
+    color: green;
+}
+
+.banner .part-1 .fourth .info .left-info h5{
+    font-weight: 700;
+}
+
+
+.banner .part-1 .fourth .info .right-info h5{
+    font-weight: 700;
+}
+
+.banner .part-1 .second{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin: 10px 0px;
+}
+
+.banner .part-1 .second .left{
+    width: 100%;
+    padding: 10px 20px 0px 20px;
+    border-radius: 25px;
+    background-color: rgba(200, 200, 200, 0.2);
+}
+
+.banner .part-1 .second .left .header{
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.banner .part-1 .second .left .header nav{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.banner .part-1 .second .left .header nav label{
+    display: block;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    color: #111;
+    font-size: 17px;
+    border-radius: 25px;
+    margin: 0 5px;
+    transition: all 0.3s ease;
+}
+
+.banner .part-1 .second .left .header nav label i{
+    padding-right: 7px;
+}
+  
+.banner .part-1 .second .left .header nav .slider{
+    position: absolute;
+    height: 100%;
+    width: 25%;
+    left: 0;
+    bottom: 0;
+    z-index: 0;
+    border-radius: 25px;
+    background: #fff;
+    transition: all 0.3s ease;
+}
+
+input[type="radio"]{
+    display: none;
+}
+ 
+#month:checked~nav .slider{
+    left: 25%;
+}
+
+#year:checked~nav .slider{
+    left: 50%;
+}
+
+#all-time:checked~nav .slider{
+    left: 75%;
+}
+
+.grid{
+    margin: 20px 0px;
+}
+
+section .content{
+    display: none;
+    color: #111;
+    background: #fff;
+    padding: 20px 16px;
+}
+
+#week:checked ~ section .content-1,
+#month:checked ~ section .content-2,
+#year:checked ~ section .content-3,
+#all-time:checked ~ section .content-4{
+    display: block;
+}
+
+section .content p{
+  text-align: justify;
+  font-size: 12px;
+}
+
+.banner .part-2{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 15px;
+    overflow: none;
+    scroll-behavior: unset;
+}
+
+.banner .part-1 .habits{
+    width: 100%;
+    height: fit-content;
+    padding: 20px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.banner .part-1 .habits .info{
+    width: 100%;
+    margin: 10px 0px;
+    padding: 15px 20px 15px 0px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+}
+
+.banner .part-1 .habits .info .pahla, .teesra{
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+
+.banner .part-1 .habits .info .dusra{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+
+.banner .part-1 .habits .info .teesra .btn{
+    width: 100%;
+    min-height: 57.25px;
+}
+
+.banner .part-1 .habits .info .pahla h4{
+    font-weight: bold;
+    text-align: center;
+}
+
+.banner .part-2 .plants{
+    width: 400px;
+    height: 500px;
+    border: 5px solid rgba(225, 225, 225, 0.85);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner .part-2 .plants h4{
+    text-align: center;
+    font-weight: bold;
+}
+
+#my-canvas{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    visibility: hidden;
+}
+
+#my-canvas.active{
+    visibility: visible;
+}
+
+.banner .part-1 .third .left-side h6{
+    font-weight: bold;
+}

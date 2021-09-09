@@ -1,0 +1,69 @@
+<!-- This is 'index.ejs' of Coastal Hacks Hackathon -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+    <!-- This is the Head Section -->
+    <head>
+
+        <!-- Meta Information for Search Engine -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Title of Website -->
+        <title>Coastal Hacks</title>
+
+        <!-- Link to the favicon -->
+        <link rel="shortcut icon" href="/images/logo.jpg" type="image/x-icon">
+
+        <!-- Link to the 'styles.css' file -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="/css/form.css">
+
+        <!-- Bootstrap scripts -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+        <!-- Fontawesome icons Script -->
+        <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" data-auto-replace-svg="nest"></script>
+
+    </head>
+
+    <!-- This is the Body Section -->
+    <body>
+
+        <%- include('messages.ejs') %>
+
+        <!-- User Regitration -->
+        <section class="register">
+            <h2 class="title">Costal Hacks User Log In</h2>
+            <form action="/user/login" method="POST">            
+                <h2><i class="fas fa-user"></i> Log In</h2>
+
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email ID</label>
+                    <input type="email" class="form-control" name="email" id="email" placeholder="Enter Your Email-ID" required autofocus>
+                </div>
+
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" name="password" class="form-control" id="password" placeholder="Enter Your Password" required autofocus>
+                </div>
+
+                <button class="btn btn-success">LogIn</button>
+  
+                <div class="mb-3 Already">
+                    <label class="form-label">Not Having a Account ? <a class="special" href="/"> Sign Up</a> </label>
+                </div>    
+            </form>
+        </section>
+        
+
+        <!-- Script to the Bootstap CDN -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    </body>
+</html>
